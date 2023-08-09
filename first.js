@@ -134,3 +134,16 @@ db.hospital.deleteMany(
 //     history: [ { disease: 'influenza', treatment: '---', medicine: '&&&&' } ]
 //   }
 // ]
+
+
+db.movieStarts.find({$expr:{$gt:["$visitors","$expectedVisitors"]}}).pretty()
+// [
+//   {
+//     _id: ObjectId("64d33d4f6c42b1f5b7799054"),
+//     title: 'Teach me if you can',
+//     meta: { rating: 8.5, aired: 2014, runtime: 90 },
+//     visitors: 590378,
+//     expectedVisitors: 500000,
+//     genre: [ 'action', 'thriller' ]
+//   }
+// ]
